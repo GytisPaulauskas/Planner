@@ -1,16 +1,16 @@
 # MultiVerse
 
-## install dependecies
+## Install dependecies
 ```
 npm i
 ```
 
-## launch server
+## Launch server
 ```
 npm run server
 ```
 
-## launch client 
+## Launch client
 ```
 npm run start 
 ```
