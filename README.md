@@ -12,5 +12,5 @@ npm run server
 
 ## launch client 
 ```
-npm run start
+npm run start 
 ```
