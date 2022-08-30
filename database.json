@@ -3,66 +3,79 @@
     {
       "id": 1,
       "title": "Išgerti kavos",
+      "important": false,
       "categoryId": 1
     },
     {
       "id": 2,
       "title": "Pavalgyti",
+      "important": false,
       "categoryId": 2
     },
     {
       "id": 3,
       "title": "Išsiųsti ataskaitą Petrui",
+      "important": false,
       "categoryId": 1
     },
     {
       "id": 4,
       "title": "Išnešti šiukšles",
+      "important": false,
       "categoryId": 2
     },
     {
       "id": 5,
       "title": "Pagulėti",
+      "important": false,
       "categoryId": 2
     },
     {
       "id": 6,
       "title": "Padaryti navBar",
+      "important": false,
       "categoryId": 3
     },
     {
       "id": 7,
       "title": "Sukurti todo listą",
+      "important": true,
       "categoryId": 3
     },
     {
       "id": 8,
       "title": "Skaniai pavalgyti",
+      "important": false,
       "categoryId": 1
     },
     {
       "id": 9,
       "title": "Nueiti pas Jona ir pakalbėti",
+      "important": false,
       "categoryId": 1
     },
     {
       "id": 10,
       "title": "Pažiūrėti proto industriją",
+      "important": false,
       "categoryId": 2
     },
     {
       "id": 11,
       "title": "Padaryti login page",
+      "important": false,
       "categoryId": 3
     },
     {
       "id": 12,
       "title": "Paskaityti apie context",
+      "important": false,
       "categoryId": 3
     },
     {
       "id": 13,
       "title": "Pažiūrėti tutorial apie JSON",
+      "important": false,
       "categoryId": 3
     }
   ],

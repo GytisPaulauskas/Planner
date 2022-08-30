@@ -4,6 +4,8 @@ import {
 } from '@mui/material';
 import RadioButtonUncheckedOutlinedIcon from '@mui/icons-material/RadioButtonUncheckedOutlined';
 import TodoService from 'services/todo-service';
+import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
+import StarIcon from '@mui/icons-material/Star';
 
 const TodoPage = () => {
   const [todo, setTodo] = React.useState([]);
@@ -34,28 +36,43 @@ const TodoPage = () => {
         {todo.map(({
           id,
           title,
+          important,
         }) => (
           <Paper
             key={id}
             elevation={0}
             sx={{
-              display: 'flex', alignItems: 'center', my: 1,
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center', my: 1,
             }}
           >
-            <IconButton sx={{
-              ':hover': {
-                bgcolor: '#ffffff',
-                color: 'white',
-              },
+            <Box sx={{
+              display: 'flex', alignItems: 'center', my: 1,
             }}
             >
-              <RadioButtonUncheckedOutlinedIcon
-                sx={{
-                  pl: 2, mr: 1, fontSize: 36, color: '#5e35b1',
-                }}
-              />
+              <IconButton sx={{
+                bgcolor: '#ffffff',
+                color: 'white',
+                ':hover': {
+                  bgcolor: '#ffffff',
+                  color: 'white',
+                },
+                ':active': {
+                  bgcolor: '#ffffff',
+                  color: 'white',
+                },
+              }}
+              >
+                <RadioButtonUncheckedOutlinedIcon
+                  sx={{
+                    pl: 2, mr: 1, fontSize: 36, color: '#5e35b1',
+                  }}
+                />
+              </IconButton>
+              <Box sx={{ color: '#323130' }}>{title}</Box>
+            </Box>
+            <IconButton>
+              {important ? <StarBorderOutlinedIcon /> : <StarIcon sx={{ color: '#5e35b1' }} />}
             </IconButton>
-            <Box sx={{ color: '#323130' }}>{title}</Box>
           </Paper>
         ))}
       </Box>
