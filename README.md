@@ -1,4 +1,4 @@
-# MultiVerse
+# Planner
 
 ## Install dependecies
 ```
