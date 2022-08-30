@@ -7,8 +7,16 @@ const fetchAll = async () => {
   return todo;
 };
 
+const remove = async (id) => {
+  await fetch((`${serverAddress}/${id}`), {
+    method: 'DELETE',
+  });
+  return true;
+};
+
 const TodoService = {
   fetchAll,
+  remove,
 };
 
 export default TodoService;
