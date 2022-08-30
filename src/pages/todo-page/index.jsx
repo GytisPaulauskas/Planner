@@ -6,6 +6,8 @@ import RadioButtonUncheckedOutlinedIcon from '@mui/icons-material/RadioButtonUnc
 import TodoService from 'services/todo-service';
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
 import StarIcon from '@mui/icons-material/Star';
+import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 
 const TodoPage = () => {
   const [todo, setTodo] = React.useState([]);
@@ -70,9 +72,17 @@ const TodoPage = () => {
               </IconButton>
               <Box sx={{ color: '#323130' }}>{title}</Box>
             </Box>
-            <IconButton>
-              {important ? <StarBorderOutlinedIcon /> : <StarIcon sx={{ color: '#5e35b1' }} />}
-            </IconButton>
+            <Box>
+              <IconButton>
+                {important ? <StarBorderOutlinedIcon /> : <StarIcon sx={{ color: '#5e35b1' }} />}
+              </IconButton>
+              <IconButton>
+                <EditOutlinedIcon />
+              </IconButton>
+              <IconButton>
+                <DeleteOutlineOutlinedIcon />
+              </IconButton>
+            </Box>
           </Paper>
         ))}
       </Box>
