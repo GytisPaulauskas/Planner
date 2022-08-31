@@ -8,15 +8,31 @@ const fetchAll = async () => {
 };
 
 const remove = async (id) => {
-  await fetch((`${serverAddress}/${id}`), {
+  await fetch((`http://localhost:8000/todo/${id}`), {
     method: 'DELETE',
   });
+
   return true;
+};
+
+const add = async (todoProps) => {
+  const response = await fetch('http://localhost:8000/todo', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(todoProps),
+  });
+
+  const todo = await response.json();
+
+  return todo;
 };
 
 const TodoService = {
   fetchAll,
   remove,
+  add,
 };
 
 export default TodoService;
